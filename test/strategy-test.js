@@ -1,7 +1,7 @@
 var vows = require('vows');
 var assert = require('assert');
 var util = require('util');
-var RunKeeperStrategy = require('passport-elance/strategy');
+var ElanceStrategy = require('passport-elance/strategy');
 
 
 vows.describe('ElanceStrategy').addBatch({
