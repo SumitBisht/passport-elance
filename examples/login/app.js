@@ -38,14 +38,12 @@ passport.use(new ElanceStrategy({
       
       // To keep the example simple, the user's elance profile is returned to
       // represent the logged-in user.  In a typical application, you would want
-      // to associate the RunKeeper account with a user record in your database,
+      // to associate this  account with a user record in your database,
       // and return that user instead.
       return done(null, profile);
     });
   }
 ));
-
-
 
 
 var app = express();
@@ -91,7 +89,7 @@ app.get('/login', function(req, res){
 //   Use passport.authenticate() as route middleware to authenticate the
 //   request.  The first step in elance authentication will involve
 //   redirecting the user to elance.com.  After authorization, elance
-//   will redirect the user back to this application at /auth/runkeeper/callback
+//   will redirect the user back to this application at /auth/elance/callback
 app.get('/auth/elance',
   passport.authenticate('elance'),
   function(req, res){
